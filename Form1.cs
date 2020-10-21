@@ -2,6 +2,7 @@
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using PdfSharp.Pdf.Security;
+using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,9 @@ namespace Test_Pdf
         {
             InitializeComponent();
         }
-
+        string path ;
+        string pass,passAdmin;
+        int af = 0;
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,8 +59,9 @@ namespace Test_Pdf
         public void button1_Click_1(object sender, EventArgs e)
         {
 
-            string path = textBox1.Text;
-            string pass = textBox2.Text;
+             path = textBox1.Text;
+             pass = textBox2.Text;
+             passAdmin = textBox3.Text;
 
             if (path != "" && pass != "")
             {
@@ -68,13 +72,28 @@ namespace Test_Pdf
 
 
                     water(path);
-                    Getpdf(pass, path);
+
+                    if (af == 2)
+                    {
+                        
+                        MessageBox.Show("Plaese Input PDF v.14 ");
+
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        checkBox9.Checked = false;
+                        
+                    }else{
+
+                        Getpdf(pass, path, passAdmin);
+                    }
+ 
+                    
                 }
 
                 else
                 {
 
-                    Getpdfnone(pass, path);
+                    Getpdfnone(pass, path, passAdmin);
 
                 }
 
@@ -92,7 +111,7 @@ namespace Test_Pdf
 
         }
 
-        public void Getpdf(string pass, string path)
+        public void Getpdf(string pass, string path, string passAdmin)
         {
 
 
@@ -115,7 +134,7 @@ namespace Test_Pdf
                 // Setting one of the passwords automatically sets the security level to 
                 // PdfDocumentSecurityLevel.Encrypted128Bit.
                 securitySettings.UserPassword = pass;
-                securitySettings.OwnerPassword = "OCTADMIN";
+                securitySettings.OwnerPassword = passAdmin;
 
 
 
@@ -247,7 +266,8 @@ namespace Test_Pdf
         }
 
 
-        public void Getpdfnone(string pass, string path)
+
+        public void Getpdfnone(string pass, string path, string passAdmin)
         {
 
             string namef = Path.GetFileName(path);
@@ -403,6 +423,7 @@ namespace Test_Pdf
 
         }
 
+       
         public void water(string pathz)
         {
 
@@ -413,9 +434,24 @@ namespace Test_Pdf
             File.Copy(Path.Combine(pathz),
             Path.Combine(desktopPath, filenameDest), true);
 
+           
             PdfDocument documentz = PdfReader.Open(pathz, "some text");
 
 
+            PdfLoadedDocument loadedDocument = new PdfLoadedDocument(pathz);
+
+            string doc = loadedDocument.FileStructure.Version.ToString();
+
+            string a = doc[7].ToString();
+            string b = doc[9].ToString();
+            string c = a+"."+b;
+
+            double d =  Double.Parse(c);
+            
+            
+
+            if (d >= 1.4)
+            {
 
             //Add watermark to first page
 
@@ -464,7 +500,18 @@ namespace Test_Pdf
                 documentz.Save(pathz);
 
 
+            }
 
+            af = 1;
+
+            }
+            else
+            {
+
+                
+               
+
+                af = 2;
 
             }
 
@@ -482,72 +529,98 @@ namespace Test_Pdf
 
             PdfDocument documentz = PdfReader.Open(pathz, "some text");
 
+            PdfLoadedDocument loadedDocument = new PdfLoadedDocument(pathz);
 
+            string doc = loadedDocument.FileStructure.Version.ToString();
 
-            //Add watermark to first page
+            string a = doc[7].ToString();
+            string b = doc[9].ToString();
+            string c = a + "." + b;
 
-            var pr = documentz.PageCount;
+            double d = Double.Parse(c);
 
-            for (var i = 0; i < pr; i++)
+            if (d >= 1.4)
             {
 
-                string watermark = "OguraClutch(Thailand)";
-                var page = documentz.Pages[i];
-                //The new content will be rendered above the existing graphic.
-                var gfx = XGraphics.FromPdfPage(page, XGraphicsPdfPageOptions.Append);
 
-                // Set text font, location and rotation
-                var textFont = new XFont("Times New Roman", 60f, XFontStyle.Bold);
-                var location = new XPoint(-150, 350);
+                //Add watermark to first page
 
-                int rotation = -45;
+                var pr = documentz.PageCount;
 
-                // Create a red brush with transparency
-                var textColor = XColor.FromArgb(128, 255, 0, 0);
+                for (var i = 0; i < pr; i++)
+                {
 
-                var brush = new XSolidBrush(textColor);
+                    string watermark = "OguraClutch(Thailand)";
+                    var page = documentz.Pages[i];
+                    //The new content will be rendered above the existing graphic.
+                    var gfx = XGraphics.FromPdfPage(page, XGraphicsPdfPageOptions.Append);
 
-                // Set a text format.
-                var format = new XStringFormat();
-                format.Alignment = XStringAlignment.Near;
-                format.LineAlignment = XLineAlignment.Near;
+                    // Set text font, location and rotation
+                    var textFont = new XFont("Times New Roman", 60f, XFontStyle.Bold);
+                    var location = new XPoint(-150, 350);
 
-                // Get the size (in points) of the text.
-                var size = gfx.MeasureString(watermark, textFont);
+                    int rotation = -45;
 
-                //Change text orientation from left-bottom to top-right          
-                gfx.TranslateTransform((location.X + size.Width) / 2, (location.Y + size.Height) / 2);
-                gfx.RotateTransform(rotation);
-                gfx.TranslateTransform(-(location.X + size.Width) / 2, -(location.Y + size.Height) / 2);
+                    // Create a red brush with transparency
+                    var textColor = XColor.FromArgb(128, 255, 0, 0);
 
-                //Draw watermark to page
-                gfx.DrawString(watermark, textFont, brush, location, format);
+                    var brush = new XSolidBrush(textColor);
+
+                    // Set a text format.
+                    var format = new XStringFormat();
+                    format.Alignment = XStringAlignment.Near;
+                    format.LineAlignment = XLineAlignment.Near;
+
+                    // Get the size (in points) of the text.
+                    var size = gfx.MeasureString(watermark, textFont);
+
+                    //Change text orientation from left-bottom to top-right          
+                    gfx.TranslateTransform((location.X + size.Width) / 2, (location.Y + size.Height) / 2);
+                    gfx.RotateTransform(rotation);
+                    gfx.TranslateTransform(-(location.X + size.Width) / 2, -(location.Y + size.Height) / 2);
+
+                    //Draw watermark to page
+                    gfx.DrawString(watermark, textFont, brush, location, format);
 
 
-                // PDF 1.4+ support transparency.
-                if (documentz.Version < 14)
-                    documentz.Version = 14;
+                    // PDF 1.4+ support transparency.
+                    if (documentz.Version < 14)
+                        documentz.Version = 14;
 
-                documentz.Save(pathz);
+                    documentz.Save(pathz);
 
 
+
+
+                }
+
+
+                MessageBox.Show("Encrpted PDF Success");
+
+                textBox1.Text = "";
+                textBox2.Text = "";
+                checkBox1.Checked = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox5.Checked = false;
+                checkBox6.Checked = false;
+                checkBox7.Checked = false;
+                checkBox8.Checked = false;
+                checkBox9.Checked = false;
                
-               
+                af = 1;
+
             }
+            else
+            {
 
-            MessageBox.Show("Encrpted PDF Success");
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
-            checkBox7.Checked = false;
-            checkBox8.Checked = false;
-            checkBox9.Checked = false;
+
+
+                af = 2;
+
+            }
 
         }
         public void button2_Click(object sender, EventArgs e)
@@ -560,6 +633,15 @@ namespace Test_Pdf
                 {
 
                     watero(path);
+
+                    if(af == 1){
+                        MessageBox.Show("Suc ");
+
+                    }else{
+                        MessageBox.Show("Plaese Input PDF version 14++ ");
+                        checkBox9.Checked = false;
+                        textBox1.Text = "";
+                    }
                 }
                 else
                 {
@@ -574,6 +656,8 @@ namespace Test_Pdf
                 MessageBox.Show("Plaese checked 'Water Mark OguraClutch(Thailand) PDF 1.4+ support'  ");
             }
         }
+
+ 
 
     }
 }
