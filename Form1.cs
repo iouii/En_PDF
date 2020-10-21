@@ -291,7 +291,7 @@ namespace Test_Pdf
                 // Setting one of the passwords automatically sets the security level to 
                 // PdfDocumentSecurityLevel.Encrypted128Bit.
                 securitySettings.UserPassword = pass;
-                securitySettings.OwnerPassword = "OCTADMIN";
+                securitySettings.OwnerPassword = passAdmin;
 
 
 
@@ -397,6 +397,7 @@ namespace Test_Pdf
 
                 textBox1.Text = "";
                 textBox2.Text = "";
+                textBox3.Text = "";
                 checkBox1.Checked = false;
                 checkBox2.Checked = false;
                 checkBox3.Checked = false;
@@ -599,6 +600,7 @@ namespace Test_Pdf
 
                 textBox1.Text = "";
                 textBox2.Text = "";
+                textBox3.Text = "";
                 checkBox1.Checked = false;
                 checkBox2.Checked = false;
                 checkBox3.Checked = false;
