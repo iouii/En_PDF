@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>C:\Users\p-boonhor\Desktop\TEST2\|ftp://192.168.10.8/AppServ/www/emi/12/|publish\</PublishUrlHistory>
-    <InstallUrlHistory>http://localhost/Test_Pdf/</InstallUrlHistory>
+    <PublishUrlHistory>C:\flutter-desktop-embe\|C:\flutter-desktop-embedding\testbed\|ftp://192.168.10.8/AppServ/www/emi/12/|C:\Users\p-boonhor\Desktop\TEST2\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>\\192.168.10.8\AppServ\www\emi\|\\192.168.10.8\AppServ\www\emi\12\|\\192.168.10.10\Picture\flutter-desktop-embe\Application Files\|http://localhost/Test_Pdf/|http://server-app/AppPath/</InstallUrlHistory>
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>http://localhost/Test_Pdf/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>

@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Test_Pdf.exe" version="1.0.0.14" publicKeyToken="b059f602febc74de" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Martin-Berube-Square-Animal-Duck.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Test_Pdf" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Test_Pdf.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.dll" size="559616">
+      <assemblyIdentity name="PdfSharp" version="1.51.5185.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>z8jW2Elk8DRvNN94i/6pJm3+rbUq+tRJoOo0CDv4qCk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PdfSharp.Charting.dll" size="80896">
+      <assemblyIdentity name="PdfSharp.Charting" version="1.51.5185.0" publicKeyToken="F94615AA0424F9EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yl/MyX51iJPkEvILuIcaD944gi/ssuAecQ2NpdjrhYA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.Charting.resources.dll" size="4608">
+      <assemblyIdentity name="PdfSharp.Charting.resources" version="1.51.5185.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>T64Rpq9k495eLxzWIwttdzOvzY+x5xkvkpW0Ty1/q/w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\PdfSharp.resources.dll" size="5120">
+      <assemblyIdentity name="PdfSharp.resources" version="1.51.5185.0" publicKeyToken="F94615AA0424F9EB" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4L5mkk5lQ1C3qKLBYaV8Djce+ABuDekSSPAuiI3Tr50=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Syncfusion.Compression.Base.dll" size="200704">
+      <assemblyIdentity name="Syncfusion.Compression.Base" version="18.2450.0.54" publicKeyToken="3D67ED1F87D44C89" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>umLwC1LUA/q1a/PDzYw/ipI4ZHO7VvCQqiFK1rnXp8M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Syncfusion.Licensing.dll" size="815104">
+      <assemblyIdentity name="Syncfusion.Licensing" version="18.2450.0.54" publicKeyToken="632609B4D040F6B4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6U0gguLOF1AvYZWZKOFoKvtiu7RS3eO2hY6FVZ9e1g0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Syncfusion.Pdf.Base.dll" size="6643200">
+      <assemblyIdentity name="Syncfusion.Pdf.Base" version="18.2450.0.54" publicKeyToken="3D67ED1F87D44C89" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rUFHu7LrMpJfpuwTp2VmN/NY+P6RBbAaN4Shju6ArZM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_Pdf.exe" size="196568">
+      <assemblyIdentity name="Test_Pdf" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sUcU2YYkMk9eBqkTEUNHdzkFNGLfUsOpdTlHsnnytsU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Martin-Berube-Square-Animal-Duck.ico" size="175777">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ezOLbjXC6n9ZGWE1O5psFOCtZQBDOPIg/hSyeARJiTg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Test_Pdf.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=OGURATHAI\p-boonhor" issuerKeyHash="03de2c91ad505abd2322934494b84d0a4f90d772" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>N1oJXiWd1XIEumcdbg7scASWoBO0M7hvq0131oJm5vg=</DigestValue></Reference></SignedInfo><SignatureValue>luwR2ElNIqOhSG/mk+wB6h6zImxRD/x6AkvKHvsqy/2yH8yNiRTrEiJTBQpToSS4r5nx75WIwWxpktHMbbK52jhvuKpTWy2ZkQPyGHhtNBMDuAcQh/hHiXPsygImbpCC7LbBHwh3ry/g55OixQatuIxdpqCF0dsDaPX+aN6gDag=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>zAOCOyKrqxWOhBFTovGfUFJbVzEkOSVgmbcLpTlr2cv4nxtqQcf55jyhoZkE7BaEoHGT08m6NbgDLdaagP3ebjUlnpiWSbYeSI5j8+KnfA/6+1GWGJv4gXjeJhrtlUO0g8WbVoQCOmgno6dCdKbqu2WsXMSKTIFFys7oej2lpnk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f8e66682d6774dab6fb833b413a0960470ec0e6e1d67ba0472d59d255e095a37" Description="" Url=""><as:assemblyIdentity name="Test_Pdf.exe" version="1.0.0.14" publicKeyToken="b059f602febc74de" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=OGURATHAI\p-boonhor</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1FO9/OPrZftCJRRZGRxvKGOi6Olz627dXeKy4qfCuPs=</DigestValue></Reference></SignedInfo><SignatureValue>IReGe5iGYv7wScH0aVExXI8a8raXP3j88gI7A15rKDGrbIG32JHQpBHwbGjwrAHwYi0UayZhKud0gW42aQuDwNgFL7aGjnPohJMpTWNwB6jlIVkm2gCfV7mCHpkVewhQ4D/JnlaNqZw8B3f2toSi8Pt0AUfXtzWZYQNBwHYqXAw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zAOCOyKrqxWOhBFTovGfUFJbVzEkOSVgmbcLpTlr2cv4nxtqQcf55jyhoZkE7BaEoHGT08m6NbgDLdaagP3ebjUlnpiWSbYeSI5j8+KnfA/6+1GWGJv4gXjeJhrtlUO0g8WbVoQCOmgno6dCdKbqu2WsXMSKTIFFys7oej2lpnk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQNmtE0oFuHZ5JR3fcGkK8vTANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYATwBHAFUAUgBBAFQASABBAEkAXABwAC0AYgBvAG8AbgBoAG8AcjAeFw0yMDA3MDcwODQ5MDVaFw0yMTA3MDcxNDQ5MDVaMDExLzAtBgNVBAMeJgBPAEcAVQBSAEEAVABIAEEASQBcAHAALQBiAG8AbwBuAGgAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMA4I7IqurFY6EEVOi8Z9QUltXMSQ5JWCZtwulOWvZy/ifG2pBx/nmPKGhmQTsFoSgcZPTybo1uAMt1pqA/d5uNSWemJZJth5IjmPz4qd8D/r7UZYYm/iBeN4mGu2VQ7SDxZtWhAI6aCejp0J0puq7ZaxcxIpMgUXKzuh6PaWmeQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBALFuWTB7RvtTCTMvV0d/2Q0CaBeRnfkmGAlplUi70BcXZzYckqMBqwPRP1tZ1SP1236h0V3h4CvjPRfioqetycgm7oG55czIOdbup3irQL56xYArEcqNZvkhvfhYbaI0zuzKapIDlkMRByJnBkNiy5VC4j7Wua4m1MR/ROoRpGkT</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

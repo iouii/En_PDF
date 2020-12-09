@@ -27,9 +27,14 @@ E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.Properties.Resources.reso
 E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.csproj.GenerateResource.Cache
 E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.exe
 E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.pdb
-E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.csprojResolveAssemblyReference.cache
 E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Syncfusion.Compression.Base.dll
 E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Syncfusion.Licensing.dll
 E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Syncfusion.Pdf.Base.dll
 E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Syncfusion.Compression.Base.xml
 E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Syncfusion.Pdf.Base.xml
+E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Test_Pdf.exe.manifest
+E:\Test_Pdf_none_watermark\Test_Pdf\bin\Debug\Test_Pdf.application
+E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.TrustInfo.xml
+E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.exe.manifest
+E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.application
+E:\Test_Pdf_none_watermark\Test_Pdf\obj\Debug\Test_Pdf.csprojResolveAssemblyReference.cache
